@@ -72,10 +72,9 @@ var clone = function(fn) {
 
 var checkURLorFile = function(file, url) {
  if (url) {
-//	sys.puts(url);
-	rest.get(url.toString()).on('complete', function(result){
-	    flag = 2;
-//	    sys.puts(result);
+	sys.puts(url);
+     var response = buildfn();
+	rest.get(url.toString()).on('complete',response)
 	    return result;
 
 	});
